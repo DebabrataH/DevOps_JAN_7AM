@@ -1,3 +1,31 @@
+vim docker-compose.yml
+ 
+ --- 
+mydb: 
+  environment: 
+    MYSQL_ROOT_PASSWORD: edureka
+  image: mariadb
+myphpmyadmin: 
+  environment: 
+    MYSQL_ROOT_PASSWORD: edureka
+    MYSQL_USERNAME: root
+  image: phpmyadmin
+  links: 
+    - "mydb:mysql"
+  ports: 
+    - "8181:80"
+mywp: 
+  image: wordpress
+  links: 
+    - "mydb:mysql"
+  ports: 
+    - "8080:80"
+
+
+
+
+
+
 
 Installation of Docker:
 
