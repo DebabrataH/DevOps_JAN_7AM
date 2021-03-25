@@ -79,7 +79,7 @@ You will ansible package is now available with yum
 //ansible will be available (wait for few seconds)
 
 
-	# yum install ansible
+	# yum install ansible git python python-lavel python-pip open-ssl -y
 
 press y
 again press y
